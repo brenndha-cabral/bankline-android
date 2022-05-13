@@ -5,21 +5,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dio.santander.bankline.R
 import dio.santander.bankline.databinding.BankStatementItemBinding
-import dio.santander.bankline.domain.Transition
-import dio.santander.bankline.domain.TypeTransition
+import dio.santander.bankline.domain.Transaction
+import dio.santander.bankline.domain.TypeTransaction
 
 /**
  * Reference: https://developer.android.com/guide/topics/ui/layout/recyclerview?hl=pt-br#kotlin
  */
-class StatementAdapter(private val dataSet: List<Transition>) : RecyclerView.Adapter<StatementAdapter.ViewHolder>() {
+class StatementAdapter(private val dataSet: List<Transaction>) : RecyclerView.Adapter<StatementAdapter.ViewHolder>() {
 
     class ViewHolder(private val binding: BankStatementItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Transition) = with(binding) {
+        fun bind(item: Transaction) = with(binding) {
             tvDescription.text = item.description
             tvValue.text = item.value.toString()
             tvDatetime.text = item.dateHour
-            val typeIcon = if (TypeTransition.INCOME == item.type) R.drawable.ic_money_in else R.drawable.ic_money_out
+            val typeIcon = if (TypeTransaction.INCOME == item.type) R.drawable.ic_money_in else R.drawable.ic_money_out
             ivIcon.setImageResource(typeIcon)
         }
     }

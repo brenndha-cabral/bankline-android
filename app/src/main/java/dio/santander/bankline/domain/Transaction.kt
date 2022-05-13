@@ -1,11 +1,11 @@
 package dio.santander.bankline.domain
 
-data class Transition(
+data class Transaction(
     val id: Int,
     val dateHour: String,
     val value: Double,
     val description: String,
-    val type: TypeTransition,
+    val type: TypeTransaction,
     // TODO map idAccount -> idClient
     val idClient: Int
 )

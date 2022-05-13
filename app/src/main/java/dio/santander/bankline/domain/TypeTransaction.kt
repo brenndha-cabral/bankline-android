@@ -1,5 +1,5 @@
 package dio.santander.bankline.domain
 
-enum class TypeTransition {
+enum class TypeTransaction {
     INCOME, EXPENSES
 }

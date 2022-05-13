@@ -20,7 +20,7 @@
             android:id="@+id/rvBankStatement"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/bank_statement_item" />
+            app:layoutManager="LinearLayoutManager"/>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
